@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#root {
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    height: 100%;
+    justify-content: center;
+}
+
+.input-area {
+    grid-column: 1/5;
+}
+
+.input {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.expression {
+    height: 30%;
+    padding-right: 35px;
+}
+
+.term-input {
+    height: 70%;
+    font-size: 3rem;
+}
+
+.button {
+    background-color: #1F1F1F;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.button:active {
+    background: radial-gradient(circle, rgb(47, 47, 47), rgb(47, 47, 47), #1F1F1F, #1F1F1F);
+}
+
+.all-clear-btn {
+    grid-column: 1/span 2;
+    color: #5ACFFD;
+}
+
+.backspace-btn {
+    grid-column: 3/span 2;
+    color: #5ACFFD;
+}
+
+.all-clear-btn:active,
+.backspace-btn:active {
+    background: radial-gradient(circle, rgb(47, 47, 47), #1F1F1F, #1F1F1F, #1F1F1F);
+}
+
+@media (max-width: 576px) {
+    .container {
+        grid-template-columns: repeat(4, 25%);
+    }
+}
